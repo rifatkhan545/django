@@ -1,0 +1,43 @@
+
+{%extends 'base.html'%}
+{% block content%}
+      <h4>Latest Post </h4>
+      <div class = 'divider'></div>
+
+    <div class="row">
+      {%for article in articles%}
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{article.picture.url}}">
+
+              <span class="card-title"><a href="{{article.get_absolute_url}}">{{article.title}}</a></span>
+          </div>
+          <div class="card-content">
+            <p>{{article.content | truncatechars:250}}</p>
+          </div>
+          <div class="card-action">
+            <a href="{{article.get_absolute_url}}">Read more</a>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+
+
+{%endblock%}
+{% block pagination%}
+<ul class="paginator center-align">
+     {% if articles.has_previous %}
+    <a href="?page={{ articles.previous_page_number }}" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Previous</a>
+    {% endif %}
+    {% if articles.has_next %}
+    <a href="?page={{ articles.next_page_number }}" class="waves-effect waves-light btn"><i class="material-icons right">arrow_forward</i>Next</a>
+    {% endif %}
+</ul>
+{% endblock%}

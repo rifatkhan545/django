@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+  {% block banner%}
+        <div class="row">
+        <div style="background-color: #ddd;" class="col s12 m12 center-align"><i class="material-icons medium">label</i>
+        <h5>-------Tag------</h5>
+        <h3>Technology</h3>
+        </div>
+
+        </div>
+{% endblock%}
+
+{% block content%}
+      <h4>Latest Post </h4>
+      <div class = 'divider'></div>
+
+    <div class="row">
+      {%for article in articles%}
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{article.picture.url}}">
+
+              <span class="card-title"><a href="{{article.get_absolute_url}}">{{article.title}}</a></span>
+          </div>
+          <div class="card-content">
+            <p>{{article.content}}</p>
+          </div>
+          <div class="card-action">
+            <a href="{{article.get_absolute_url}}">Read more</a>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+
+{%endblock%}

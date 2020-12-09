@@ -1,0 +1,141 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+<style>
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+#img-circle-custom-profile {
+    position: relative;
+    z-index: 10;
+    border-radius : 50% ;
+    border-style : solid;
+    border-color: white;
+    border-width :3 px;
+    top :25% ;
+    margin-right :auto;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 480px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+</style>
+
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card">
+        <div id="img-circle-custom-profile class="card-image">
+          <img id="img-circle-custom-profile" src="{%static 'img/images.jpg' %}">
+
+          <h5 style="font-weight:bold ; padding: 20px;"> Card Title</h5>
+        </div>
+        <div class="card-action">
+          <h6 style="font-weight:bold">Location :</h6>
+          <span>Dhaka</span>
+          <h6 style="font-weight:bold">url :</h6>
+          <span>Github_url</span>
+          <h6 style = "font-weight:bold">Bio</h6>
+          <span>Princess Diana became Lady Diana Spencer after her father inherited the title of Earl Spencer in 1975. She married the heir to the British throne, Prince Charles, on July 29, 1981. They had two sons and later divorced in 1996. Diana died on August 31, 1997, from injuries she sustained in a car crash in Paris. She is remembered as the "People's Princess" because of her widespread popularity and global humanitarian efforts. </span>
+
+        </div>
+
+
+
+
+ <div class="card-content">
+     <div>
+        <h1 style = "font-weight:bold">Favourite Article</h1>
+
+                <div class="col s12 m4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{%static 'img/profile.jpeg' %}">
+                      <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                <div class="col s12 m4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{%static 'img/profile.jpeg' %}">
+                      <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information..</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="col s12 m4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{%static 'img/profile.jpeg' %}">
+                      <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information. .</p>
+                    </div>
+                  </div>
+                </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+{%endblock%}
